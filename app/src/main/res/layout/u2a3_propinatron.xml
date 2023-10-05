@@ -24,8 +24,24 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="1"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <Button
+        android:id="@+id/u2a3Cero"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:background="#446C6E"
+        android:text="0"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,14 +49,14 @@
         app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <Button
         android:id="@+id/u2a3Dos"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="2"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -49,36 +65,36 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.516" />
 
     <Button
         android:id="@+id/u2a3Tres"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="3"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.282" />
+        app:layout_constraintVertical_bias="0.516" />
 
     <Button
         android:id="@+id/u2a3Cuatro"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="4"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.397" />
@@ -88,7 +104,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="5"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -104,13 +120,13 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="6"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.397" />
@@ -120,23 +136,23 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="7"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.282" />
 
     <Button
         android:id="@+id/u2a3Ocho"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="8"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
@@ -145,15 +161,47 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.282" />
 
     <Button
         android:id="@+id/u2a3Nueve"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="96dp"
         android:layout_height="59dp"
-        android:background="#6AA7A9"
+        android:background="#446C6E"
         android:text="9"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
+
+    <Button
+        android:id="@+id/u2a3AC"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:background="#4A4A4A"
+        android:text="AC"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <Button
+        android:id="@+id/u2a3C"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:background="#4A4A4A"
+        android:text="C"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -161,31 +209,15 @@
         app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <Button
-        android:id="@+id/u2a3AC"
+        android:id="@+id/u2a3Calcular"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="156dp"
         android:layout_height="50dp"
-        android:background="#4A4A4A"
-        android:text="AC"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
-
-    <Button
-        android:id="@+id/u2a3C"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="156dp"
-        android:layout_height="50dp"
-        android:background="#4A4A4A"
-        android:text="C"
+        android:background="#34677F"
+        android:text="Calcular"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -193,45 +225,67 @@
         app:layout_constraintHorizontal_bias="0.839"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.613" />
+        app:layout_constraintVertical_bias="0.745" />
 
-    <EditText
-        android:id="@+id/u2a2Cuenta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Cuenta"
+    <RadioGroup
+        android:id="@+id/u2a3RadioGroup"
+        android:layout_width="155dp"
+        android:layout_height="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88">
+
+        <RadioButton
+            android:id="@+id/u2a3BotonExcelente"
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:text="Excelente"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.926" />
+
+        <RadioButton
+            android:id="@+id/u2a3BotonBueno"
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:text="Bueno"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.859" />
+
+        <RadioButton
+            android:id="@+id/u2a3BotonMalo"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:text="Malo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.786" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/u2a3Cuenta"
+        android:layout_width="157dp"
+        android:layout_height="27dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.315"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/u2a3AC"
-        app:layout_constraintVertical_bias="0.08" />
-
-    <RadioButton
-        android:id="@+id/u2a2BotonBueno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Bueno"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="584dp" />
-
-    <RadioButton
-        android:id="@+id/u2a2BotonExcelente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Excelente"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="616dp" />
-
-    <RadioButton
-        android:id="@+id/u2a2BotonMalo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Malo"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="552dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.821" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
