@@ -24,6 +24,7 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
     ImageView papelImageView;
     ImageView tijeraImageView;
     Button salirBoton;
+    Button reiniciarBoton;
     ImageView ganadoImageView;
     ImageView perdidoImageView;
 
@@ -57,9 +58,11 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
         papelImageView = findViewById(R.id.u2a6ivPapel);
         tijeraImageView = findViewById(R.id.u2a6ivTijera);
         salirBoton = findViewById(R.id.u2a6btSalir);
+        reiniciarBoton = findViewById(R.id.u2a6btReiniciar);
         ganadoImageView = findViewById(R.id.u2a6ivGanado);
         perdidoImageView = findViewById(R.id.u2a6ivPerdido);
 
+        reiniciarBoton.setVisibility(View.GONE);
         ganadoImageView.setVisibility(View.GONE);
         perdidoImageView.setVisibility(View.GONE);
 
@@ -72,19 +75,37 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
             }
         });
 
-    }
+        reiniciarBoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reiniciar();
+            }
+        });
 
-    public void onClick(View view){
-        if(view == piedraImageView) {
-            datoJugador = 1;
-            Aleatorio();
-        } else if (view == papelImageView){
-            datoJugador = 2;
-            Aleatorio();
-        } else if (view == tijeraImageView){
-            datoJugador = 3;
-            Aleatorio();
-        }
+        piedraImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datoJugador = 1;
+                Aleatorio();
+            }
+        });
+
+        papelImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datoJugador = 2;
+                Aleatorio();
+            }
+        });
+
+        tijeraImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datoJugador = 3;
+                Aleatorio();
+            }
+        });
+
     }
 
     //Este metodo cambia la imagen de "Esperando eleccion..." por la eleccion del jugador
@@ -117,7 +138,7 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
             datoIA = 3;
         }
 
-        Resultado();
+        ResultadoJugador();
     }
 
     //Este metodo compara quien gana
@@ -156,9 +177,9 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
                 contadorJugador ++;
 
                 marcadorAzul.setText(String.valueOf(contadorJugador));
-
-                Fin();
             }
+
+            Fin();
         }  catch (Exception e){
             String error = "Error en: " + e;
             errorStatus.setText(error);
@@ -172,34 +193,65 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
             marcadorRojo.setVisibility(View.GONE);
             eleccionJugador.setVisibility(View.GONE);
             eleccionIA.setVisibility(View.GONE);
+            nombreUsuario.setVisibility(View.GONE);
             nombreIA.setVisibility(View.GONE);
             textoSeleccion.setVisibility(View.GONE);
             piedraImageView.setVisibility(View.GONE);
             papelImageView.setVisibility(View.GONE);
             tijeraImageView.setVisibility(View.GONE);
             salirBoton.setVisibility(View.GONE);
+            reiniciarBoton.setVisibility(View.VISIBLE);
             ganadoImageView.setVisibility(View.VISIBLE);
 
-            Intent login = new Intent(this, u2a6PiedraPapelTijera.class);
-            startActivity(login);
-            finish();
-        } else if (contadorJugador == 3){
+        } else if (contadorIA == 3){
             errorStatus.setVisibility(View.GONE);
             marcadorAzul.setVisibility(View.GONE);
             marcadorRojo.setVisibility(View.GONE);
             eleccionJugador.setVisibility(View.GONE);
             eleccionIA.setVisibility(View.GONE);
+            nombreUsuario.setVisibility(View.GONE);
             nombreIA.setVisibility(View.GONE);
             textoSeleccion.setVisibility(View.GONE);
             piedraImageView.setVisibility(View.GONE);
             papelImageView.setVisibility(View.GONE);
             tijeraImageView.setVisibility(View.GONE);
             salirBoton.setVisibility(View.GONE);
+            reiniciarBoton.setVisibility(View.VISIBLE);
             perdidoImageView.setVisibility(View.VISIBLE);
 
-            Intent login = new Intent(this, u2a6PiedraPapelTijera.class);
-            startActivity(login);
-            finish();
         }
     }
+
+    public void reiniciar() {
+        datoJugador = 0;
+        datoIA = 0;
+        contadorJugador = 0;
+        contadorIA = 0;
+
+        // Restablecer las imágenes de las elecciones del jugador y la IA a la imagen predeterminada
+        eleccionJugador.setImageResource(R.drawable.esperandoazul);
+        eleccionIA.setImageResource(R.drawable.esperandorojo);
+
+        // Restablecer el texto de los marcadores
+        marcadorAzul.setText("0");
+        marcadorRojo.setText("0");
+
+        // Mostrar nuevamente los elementos ocultos
+        errorStatus.setVisibility(View.VISIBLE);
+        marcadorAzul.setVisibility(View.VISIBLE);
+        marcadorRojo.setVisibility(View.VISIBLE);
+        eleccionJugador.setVisibility(View.VISIBLE);
+        eleccionIA.setVisibility(View.VISIBLE);
+        nombreUsuario.setVisibility(View.VISIBLE);
+        nombreIA.setVisibility(View.VISIBLE);
+        textoSeleccion.setVisibility(View.VISIBLE);
+        piedraImageView.setVisibility(View.VISIBLE);
+        papelImageView.setVisibility(View.VISIBLE);
+        tijeraImageView.setVisibility(View.VISIBLE);
+        salirBoton.setVisibility(View.VISIBLE);
+        reiniciarBoton.setVisibility(View.GONE);
+        ganadoImageView.setVisibility(View.GONE);
+        perdidoImageView.setVisibility(View.GONE);
+    }
+
 }
