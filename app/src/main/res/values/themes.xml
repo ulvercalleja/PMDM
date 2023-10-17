@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.U2a2Colorator" parent="Base.Theme.U2a2Colorator" />
+    <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style>
 </resources>

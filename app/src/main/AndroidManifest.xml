@@ -13,7 +13,7 @@
         android:theme="@style/Theme.U2a2Colorator"
         tools:targetApi="31">
         <activity
-            android:name=".u2a5TattoApp"
+            android:name=".u2a6PiedraPapelTijeraPartida"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".u2a5TatuApp"
+            android:name=".u2a6PiedraPapelTijera"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".u2a5TattoApp"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
