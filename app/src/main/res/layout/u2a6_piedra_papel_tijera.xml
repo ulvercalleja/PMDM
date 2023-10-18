@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#41B6A4"
-    tools:context=".u2a6PiedraPapelTijera">
+    tools:context=".ut02.u2a6PiedraPapelTijera">
 
     <ImageView
         android:id="@+id/u2a6logoVertical"

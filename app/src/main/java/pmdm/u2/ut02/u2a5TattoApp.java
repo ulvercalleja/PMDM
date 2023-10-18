@@ -1,4 +1,4 @@
-package pmdm.u2;
+package pmdm.u2.ut02;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -13,8 +13,9 @@ import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
+
+import pmdm.u2.R;
 
 public class u2a5TattoApp extends AppCompatActivity {
 

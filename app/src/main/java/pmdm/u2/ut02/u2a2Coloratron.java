@@ -1,4 +1,4 @@
-package pmdm.u2;
+package pmdm.u2.ut02;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import pmdm.u2.R;
+
 public class u2a2Coloratron extends AppCompatActivity {
 
     @Override

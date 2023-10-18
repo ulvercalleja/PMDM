@@ -13,7 +13,7 @@
         android:theme="@style/Theme.U2a2Colorator"
         tools:targetApi="31">
         <activity
-            android:name=".u2a6PiedraPapelTijeraPartida"
+            android:name=".ut03.u3a1CalculatronPlus"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".u2a6PiedraPapelTijera"
+            android:name=".ut03.u3a1CalculatronPlusResultado"
+            android:exported="false" />
+        <activity
+            android:name=".ut02.u2a6PiedraPapelTijeraPartida"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,7 +34,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".u2a5TattoApp"
+            android:name=".ut02.u2a6PiedraPapelTijera"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +43,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".u2a3Propinatron"
+            android:name=".ut02.u2a5TattoApp"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +52,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".u2a2Coloratron"
+            android:name=".ut02.u2a3Propinatron"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut02.u2a2Coloratron"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

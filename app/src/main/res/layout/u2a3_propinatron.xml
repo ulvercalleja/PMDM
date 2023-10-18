@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".u2a3Propinatron">
+    tools:context=".ut02.u2a3Propinatron">
 
     <ImageView
         android:id="@+id/u2a2cCabecera"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".u2a6PiedraPapelTijeraPartida">
+    tools:context=".ut02.u2a6PiedraPapelTijeraPartida">
 
     <ImageView
         android:id="@+id/u2a6ivPerdido"

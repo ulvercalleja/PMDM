@@ -1,4 +1,4 @@
-package pmdm.u2;
+package pmdm.u2.ut02;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import pmdm.u2.R;
 
 public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
     TextView errorStatus;

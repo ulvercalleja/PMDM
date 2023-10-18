@@ -5,7 +5,7 @@
     android:id="@+id/u2a5ivCheck"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".u2a5TattoApp">
+    tools:context=".ut02.u2a5TattoApp">
 
     <!--on below line we are creating a text view-->
 

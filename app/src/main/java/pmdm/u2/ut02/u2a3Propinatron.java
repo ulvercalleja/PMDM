@@ -1,4 +1,4 @@
-package pmdm.u2;
+package pmdm.u2.ut02;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import pmdm.u2.R;
 
 
 public class u2a3Propinatron extends AppCompatActivity {
