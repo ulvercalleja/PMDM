@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a2Heladotron">
+
+    <EditText
+        android:id="@+id/u3a2etVainilla"
+        android:layout_width="207dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/u3a2etFresa"
+        android:layout_width="207dp"
+        android:layout_height="106dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2etVainilla" />
+
+    <EditText
+        android:id="@+id/u3a2etChocolate"
+        android:layout_width="207dp"
+        android:layout_height="108dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2etFresa" />
+
+    <TextView
+        android:id="@+id/u3a2tvVainilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="102dp"
+        android:text="Vainilla"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/u3a2etVainilla"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a2tvFresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Fresa"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/u3a2etFresa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvVainilla" />
+
+    <TextView
+        android:id="@+id/u3a2tvChocolate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Chocolate"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toStartOf="@+id/u3a2etChocolate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2tvFresa" />
+
+    <Spinner
+        android:id="@+id/u3a2spRecipientes"
+        android:layout_width="369dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2etChocolate" />
+</androidx.constraintlayout.widget.ConstraintLayout>
