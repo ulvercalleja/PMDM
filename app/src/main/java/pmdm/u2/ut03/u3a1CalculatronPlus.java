@@ -25,7 +25,6 @@ public class u3a1CalculatronPlus extends AppCompatActivity {
     RadioButton rbDividir;
     RadioGroup rgGrupo;
     EditText ptNum2;
-    TextView validationStatus;
     Button btCalcular;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,31 +38,44 @@ public class u3a1CalculatronPlus extends AppCompatActivity {
         rbDividir = findViewById(R.id.u3a1rbDividir);
         rgGrupo = findViewById(R.id.u3a1rgGrupoRadio);
         ptNum2 = findViewById(R.id.u3a1ptNum2);
-        validationStatus = findViewById(R.id.u3a1tvValidar);
         btCalcular = findViewById(R.id.u3a1btCalcular);
 
         btCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String num1 = ptNum1.getText().toString();
-                String num2 = ptNum2.getText().toString();
 
-                if (num1.isEmpty() && num2.isEmpty() ) {
-                    validationStatus.setText("Por favor, introduzca ambos numeros");
-                } else if (num1.isEmpty() ){
-                    validationStatus.setText("Por favor, introduzca el primer numero");
-                } else if (num2.isEmpty() ){
-                    validationStatus.setText("Por favor, introduzca el segundo numero");
-                } else if (!num1.matches("\\d+") && !num2.matches("\\d+")) {
-                    validationStatus.setText("Por favor, introduzca números válidoss");
-                }else {
-                    validationStatus.setText("");
+                String num1 = ptNum1.getText().toString().trim();
+                String num2 = ptNum2.getText().toString();
+                int radioButtonId = rgGrupo.getCheckedRadioButtonId();
+                RadioButton selectedRadioButton = findViewById(radioButtonId);
+                String operacion = selectedRadioButton.getText().toString();
+
+                //Control de errores campos vacios en edit text
+
+                if (num1.isEmpty() || num2.isEmpty()) {
+                    if (num1.isEmpty()) {
+                        ptNum1.setError("Por favor, introduzca un número.");
+                    } else {
+                        ptNum1.setError(null); // Borra cualquier mensaje de error existente
+                    }
+
+                    if (num2.isEmpty()) {
+                        ptNum2.setError("Por favor, introduzca un número.");
+                    } else {
+                        ptNum2.setError(null); // Borra cualquier mensaje de error existente
+                    }
+                } else {
+                    ptNum1.setError(null);
+                    ptNum2.setError(null);
+
                     Intent intent = new Intent(u3a1CalculatronPlus.this, u3a1CalculatronPlusResultado.class);
+                    intent.putExtra("num1", num1);
+                    intent.putExtra("num2", num2);
+                    intent.putExtra("operacion", operacion);
                     startActivity(intent);
                     finish();
                 }
-
             }
         });
     }
