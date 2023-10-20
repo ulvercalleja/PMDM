@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">u2a2Colorator</string>
+    <string-array name="recipientes">
+        <item>Cucurucho</item>
+        <item>Cucurucho de chocolate/item></item>
+        <item>Tarrina</item>
+    </string-array>
 </resources>
