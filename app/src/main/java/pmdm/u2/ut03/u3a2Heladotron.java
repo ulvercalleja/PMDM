@@ -57,7 +57,6 @@ public class u3a2Heladotron extends AppCompatActivity {
                 opcionSeleccionada = opciones.get(position);
                 // Haz algo con la opción seleccionada
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
                 // Si no se selecciona nada
