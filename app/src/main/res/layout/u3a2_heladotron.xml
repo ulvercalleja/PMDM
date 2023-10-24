@@ -87,4 +87,25 @@
         android:layout_marginEnd="42dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/u3a2etChocolate" />
+
+    <Button
+        android:id="@+id/u3a2btPedir"
+        android:layout_width="124dp"
+        android:layout_height="76dp"
+        android:layout_marginBottom="24dp"
+        android:text="PEDIR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/u3a2tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/u3a2btPedir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u3a2spRecipientes" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.U2a2Colorator"
         tools:targetApi="31">
         <activity
+            android:name=".ut03.u3a2HeladotronP2"
+            android:exported="false" />
+        <activity
             android:name=".ut03.u3a2Heladotron"
             android:exported="true">
             <intent-filter>
