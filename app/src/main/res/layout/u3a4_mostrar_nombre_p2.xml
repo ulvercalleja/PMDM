@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a4MostrarNombreP2">
+
+    <EditText
+        android:id="@+id/u3a4etNombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Introduzca un nombre: "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3a4btAceptar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#03A9F4"
+        android:text="Aceptar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/u3a4etNombreUsuario"
+        app:layout_constraintStart_toStartOf="@+id/u3a4etNombreUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4etNombreUsuario" />
+    <Button
+        android:id="@+id/u3a4btCancelar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#E91E63"
+        android:text="Cancelar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/u3a4btAceptar"
+        app:layout_constraintStart_toStartOf="@+id/u3a4btAceptar"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4btAceptar" />
+
+    <Button
+        android:id="@+id/u3a4btLimpiar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Limpiar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/u3a4btCancelar"
+        app:layout_constraintStart_toStartOf="@+id/u3a4btCancelar"
+        app:layout_constraintTop_toBottomOf="@+id/u3a4btCancelar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
