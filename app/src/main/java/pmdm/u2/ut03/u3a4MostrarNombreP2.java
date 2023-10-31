@@ -48,5 +48,9 @@ public class u3a4MostrarNombreP2 extends AppCompatActivity {
             finish();
         });
 
+        btLimpiar.setOnClickListener((View.OnClickListener) view -> {
+
+        });
+
     }
 }
