@@ -34,7 +34,7 @@ public class u3a7ElegirPersonaje extends AppCompatActivity {
         ivPersonaje4 = findViewById(R.id.u3a7ivPersonaje4);
         btLimpiar = findViewById(R.id.u3a7btLimpiarPersonaje);
         btCancelar = findViewById(R.id.u3a7btCancelarPersonaje);
-
+        /*
         manejador = (View imagenPulsada) -> {
             ImageView imagen = (ImageView) imagenPulsada;
             if (imagenPulsada == ivPersonaje1){
@@ -68,6 +68,15 @@ public class u3a7ElegirPersonaje extends AppCompatActivity {
         ivPersonaje2.setOnClickListener(manejador);
         ivPersonaje3.setOnClickListener(manejador);
         ivPersonaje4.setOnClickListener(manejador);
+        */
+
+        ivPersonaje1.setOnClickListener(view -> {
+            imageResource = R.drawable.personaje1;
+            Intent intent = new Intent();
+            intent.putExtra(INFO_IMAGEN, imageResource);
+            setResult(Activity.RESULT_OK, intent);
+            finish();
+        });
 
         btLimpiar.setOnClickListener(view -> {
             finish();
