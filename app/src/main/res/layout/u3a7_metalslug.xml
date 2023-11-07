@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a7Metalslug">
+    <Button
+        android:id="@+id/u3a7btSeleccionarArma2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FF9800"
+        android:text="Seleccionar Arma"
+        android:textColor="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7ivSeleccionarArma2"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivSeleccionarArma2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivSeleccionarArma2" />
+
+    <Button
+        android:id="@+id/u3a7btSeleccionarJugador2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Seleccionar Jugador 2"
+        android:textColor="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7ivSeleccionarJugador2"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivSeleccionarJugador2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivSeleccionarJugador2" />
+
+    <Button
+        android:id="@+id/u3a7btSeleccionarArma1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#FF9800"
+        android:text="Seleccionar Arma"
+        android:textColor="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7ivSeleccionarArma1"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivSeleccionarArma1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivSeleccionarArma1" />
+
+    <Button
+        android:id="@+id/u3a7btSeleccionarJugador1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#00BCD4"
+        android:text="Seleccionar Jugador 1"
+        android:textColor="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7ivSeleccionarJugador1"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="@+id/u3a7ivSeleccionarJugador1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7ivSeleccionarJugador1"
+        app:srcCompat="@drawable/interrogacion" />
+
+    <ImageView
+        android:id="@+id/u3a7ivSeleccionarJugador2"
+        android:layout_width="163dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7btSeleccionarJugador1"
+        app:layout_constraintStart_toStartOf="@+id/u3a7btSeleccionarJugador1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7btSeleccionarJugador1"
+        app:srcCompat="@drawable/interrogacion" />
+
+    <ImageView
+        android:id="@+id/u3a7ivSeleccionarArma2"
+        android:layout_width="163dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7btSeleccionarArma1"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="@+id/u3a7btSeleccionarArma1"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7btSeleccionarArma1"
+        app:srcCompat="@drawable/interrogacion" />
+
+    <ImageView
+        android:id="@+id/u3a7ivSeleccionarArma1"
+        android:layout_width="163dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintStart_toEndOf="@+id/u3a7ivSeleccionarJugador1"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivSeleccionarJugador1"
+        app:srcCompat="@drawable/interrogacion" />
+
+    <ImageView
+        android:id="@+id/u3a7ivSeleccionarJugador1"
+        android:layout_width="163dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/interrogacion" />
+
+    <TextView
+        android:id="@+id/u3a7tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u3a7btSeleccionarArma2"
+        app:layout_constraintStart_toStartOf="@+id/u3a7btSeleccionarJugador2"
+        app:layout_constraintTop_toBottomOf="@+id/u3a7btSeleccionarArma2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

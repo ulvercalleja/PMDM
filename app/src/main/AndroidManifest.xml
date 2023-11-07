@@ -13,6 +13,45 @@
         android:theme="@style/Theme.U2a2Colorator"
         tools:targetApi="31">
         <activity
+            android:name=".ut03.u3a7ElegirArma"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a7ElegirPersonaje"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a7Metalslug"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut03.u3a6Analizador"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a6AnalisisLetras"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ut03.u3a5SiguienteNumero"
+            android:exported="false" />
+        <activity
+            android:name=".ut03.u3a5Fibonacci"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ut03.u3a4MostrarNombreP2"
             android:exported="false" />
         <activity

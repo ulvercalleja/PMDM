@@ -49,7 +49,12 @@ public class u3a4MostrarNombreP2 extends AppCompatActivity {
         });
 
         btLimpiar.setOnClickListener((View.OnClickListener) view -> {
-
+            etNombreUsuario.setText("");
+            nombre = String.valueOf(etNombreUsuario.getText());
+            Intent data = new Intent();
+            data.putExtra(INFO_NOMBREP2, nombre);
+            setResult(Activity.RESULT_OK, data);
+            finish();
         });
 
     }
