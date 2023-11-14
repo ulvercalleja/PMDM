@@ -7,11 +7,20 @@ public class u3a8Monstruo implements Serializable {
     String nombre;
     int numeroMiembros;
     String color;
-
+    int brazosIzquierdos;
+    int brazosDerechos;
+    int piernasIzquierdas;
+    int piernasDerechas;
     public u3a8Monstruo(String nombre, int numeroMiembros, String color) {
         this.nombre = nombre;
         this.numeroMiembros = numeroMiembros;
         this.color = color;
+        // Distribución aleatoria de partes entre brazos, piernas, y torso
+        Random random = new Random();
+        brazosIzquierdos = random.nextInt(numeroMiembros + 1);
+        brazosDerechos = random.nextInt(numeroMiembros - brazosIzquierdos + 1);
+        piernasIzquierdas = random.nextInt(numeroMiembros - brazosIzquierdos - brazosDerechos + 1);
+        piernasDerechas = numeroMiembros - brazosIzquierdos - brazosDerechos - piernasIzquierdas;
     }
 
     @Override
@@ -22,13 +31,6 @@ public class u3a8Monstruo implements Serializable {
         monstruoAsciiArt.append("Nombre: ").append(nombre).append("\n");
         monstruoAsciiArt.append("Color: ").append(color).append("\n");
         monstruoAsciiArt.append("Número de partes: ").append(numeroMiembros).append("\n");
-
-        // Distribución aleatoria de partes entre brazos, piernas, y torso
-        Random random = new Random();
-        int brazosIzquierdos = random.nextInt(numeroMiembros + 1);
-        int brazosDerechos = random.nextInt(numeroMiembros - brazosIzquierdos + 1);
-        int piernasIzquierdas = random.nextInt(numeroMiembros - brazosIzquierdos - brazosDerechos + 1);
-        int piernasDerechas = numeroMiembros - brazosIzquierdos - brazosDerechos - piernasIzquierdas;
 
         // Dibujar el monstruo con ASCII art
         monstruoAsciiArt.append("*\n");

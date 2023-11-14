@@ -26,10 +26,10 @@ public class u3a8MostrarMonstruo extends AppCompatActivity {
         if (intent != null && intent.hasExtra(u3a8MonstruosSA.KEY_MONSTRUO)) {
             u3a8Monstruo monstruo = (u3a8Monstruo) intent.getSerializableExtra(u3a8MonstruosSA.KEY_MONSTRUO);
             String monstruoString = monstruo.toString();
-            monstruoTextView.setText(monstruoString);
+            monstruoTextView.setText(monstruoString+"/n"+monstruo);
 
             // Cambiar el color del texto en función del color del monstruo
-            String color = monstruo.color.toString().toLowerCase();  // Convertir a minúsculas para hacer el check sin distinción de mayúsculas
+            String color = monstruo.color.toString().toLowerCase();  // Convertir a minúsculas
             switch (color) {
                 case "azul":
                     monstruoTextView.setTextColor(Color.BLUE);
@@ -51,7 +51,7 @@ public class u3a8MostrarMonstruo extends AppCompatActivity {
                     break;
                 default:
                     monstruoTextView.setTextColor(Color.BLACK);
-                    break;  // Color predeterminado en caso de que no coincida con ningún caso
+                    break;
             }
 
 
