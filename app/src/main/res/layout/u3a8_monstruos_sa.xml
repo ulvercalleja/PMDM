@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a8MonstruosSA">
+
+    <EditText
+        android:id="@+id/u3a8etNombre"
+        android:layout_width="351dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="54dp"
+        android:hint="Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/u3a8etNumMiembros"
+        android:layout_width="351dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/u3a8etNombre"
+        android:layout_marginTop="16dp"
+        android:hint="Número de miembros"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/u3a8etNombre"
+        app:layout_constraintStart_toStartOf="@+id/u3a8etNombre"
+        app:layout_constraintTop_toBottomOf="@+id/u3a8etNombre" />
+
+    <EditText
+        android:id="@+id/u3a8etColor"
+        android:layout_width="351dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/u3a8etNumMiembros"
+        android:layout_marginTop="16dp"
+        android:hint="Color"
+        app:layout_constraintEnd_toEndOf="@+id/u3a8etNumMiembros"
+        app:layout_constraintStart_toStartOf="@+id/u3a8etNumMiembros"
+        app:layout_constraintTop_toBottomOf="@+id/u3a8etNumMiembros" />
+
+    <Button
+        android:id="@+id/u3a8btEnviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/u3a8etColor"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#4CAF50"
+        android:text="Enviar"
+        android:textColor="#FDFDFD"
+        app:layout_constraintEnd_toEndOf="@+id/u3a8etColor"
+        app:layout_constraintStart_toStartOf="@+id/u3a8etColor"
+        app:layout_constraintTop_toBottomOf="@+id/u3a8etColor" />
+</androidx.constraintlayout.widget.ConstraintLayout>
