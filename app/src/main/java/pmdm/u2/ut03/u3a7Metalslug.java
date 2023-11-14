@@ -94,21 +94,6 @@ public class u3a7Metalslug extends AppCompatActivity {
         btSeleccionarJugador2.setOnClickListener(manejador);
         btSeleccionarArma1.setOnClickListener(manejador);
         btSeleccionarArma2.setOnClickListener(manejador);
-        /*
-        btSeleccionarJugador1.setOnClickListener(view -> {
 
-        });
-
-        btSeleccionarArma1.setOnClickListener(view -> {
-
-        });
-
-        btSeleccionarJugador2.setOnClickListener(view -> {
-
-        });
-
-        btSeleccionarArma2.setOnClickListener(view -> {
-
-        });*/
     }
 }
