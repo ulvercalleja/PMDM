@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#41B6A4"
+    tools:context=".ut02.u2a6PiedraPapelTijera">
+
+    <ImageView
+        android:id="@+id/u2a6logoVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/piedrapapeltijeravertical" />
+
+    <EditText
+        android:id="@+id/u2a6ptNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u2a6logoVertical"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/u2a6logoVertical"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u2a6btJugar"
+        android:layout_width="241dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/a2a6btjugarovalo"
+        android:onClick="onClick"
+        android:text="¡Jugar!"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/u2a6ptNombre"
+        app:layout_constraintStart_toStartOf="@+id/u2a6ptNombre"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6ptNombre" />
+
+    <TextView
+        android:id="@+id/u2a6tvValidar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/u2a6btJugar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u2a6ptNombre" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,6 +19,7 @@ public class u3a6AnalisisLetras extends AppCompatActivity {
     public static final String INFO_TEXTO = "texto";
     EditText etTexto;
     Button btAnalizar;
+    TextView tvResultado;
     TextView tvError;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,13 +27,14 @@ public class u3a6AnalisisLetras extends AppCompatActivity {
         setContentView(R.layout.u3a6_analisis_letras);
         etTexto = findViewById(R.id.u3a6etTexto);
         btAnalizar = findViewById(R.id.u3a6btAnalizar);
+        tvResultado = findViewById(R.id.u3a6tvResultado);
         tvError = findViewById(R.id.u3a6tvError);
 
         ActivityResultLauncher<Intent> lanzadora = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(), (result)->{
                     if (result.getResultCode() == Activity.RESULT_OK) {
                         Intent data = result.getData();
-                        //tvResultadoSuma.setText(data.getStringExtra(u3a5SiguienteNumero.INFO_RESULTADO_SUMA));
+                        tvResultado.setText(data.getStringExtra(u3a6Analizador.CLAVE_ANALISIS));
                         tvError.setText("");
                     } else if (result.getResultCode() == Activity.RESULT_CANCELED){
                         tvError.setTextColor(Color.RED);

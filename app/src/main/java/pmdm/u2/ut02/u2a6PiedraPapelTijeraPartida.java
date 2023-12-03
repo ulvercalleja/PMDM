@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.os.Vibrator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -202,6 +203,8 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
             salirBoton.setVisibility(View.GONE);
             reiniciarBoton.setVisibility(View.VISIBLE);
             ganadoImageView.setVisibility(View.VISIBLE);
+            Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+            v.vibrate(3000);
 
         } else if (contadorIA == 3){
             errorStatus.setVisibility(View.GONE);
@@ -218,7 +221,8 @@ public class u2a6PiedraPapelTijeraPartida extends AppCompatActivity {
             salirBoton.setVisibility(View.GONE);
             reiniciarBoton.setVisibility(View.VISIBLE);
             perdidoImageView.setVisibility(View.VISIBLE);
-
+            Vibrator v = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+            v.vibrate(3000);
         }
     }
 

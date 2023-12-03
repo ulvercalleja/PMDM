@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03.u3a9aIntentImplicitos">
+
+    <Button
+        android:id="@+id/u3a9btCancion"
+        android:layout_width="184dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="84dp"
+        android:text="Cancion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u3a9btNumero"
+        android:layout_width="184dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="Numero"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btCancion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btCancion"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btCancion" />
+
+    <Button
+        android:id="@+id/u3a9btSMS"
+        android:layout_width="184dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="SMS"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btNumero"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btNumero"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btNumero" />
+
+    <Button
+        android:id="@+id/u3a9btMapa"
+        android:layout_width="184dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="Mapa"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btSMS"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btSMS"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btSMS" />
+
+    <Button
+        android:id="@+id/u3a9btAlarma"
+        android:layout_width="184dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="Alarma"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btMapa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btMapa"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btMapa" />
+
+    <TextView
+        android:id="@+id/u3a9atvError"
+        android:layout_width="278dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="76dp"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/u3a9btAlarma"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="@+id/u3a9btAlarma"
+        app:layout_constraintTop_toBottomOf="@+id/u3a9btAlarma" />
+</androidx.constraintlayout.widget.ConstraintLayout>

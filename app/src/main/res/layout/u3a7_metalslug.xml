@@ -56,42 +56,46 @@
         app:layout_constraintTop_toBottomOf="@+id/u3a7ivSeleccionarJugador1"
         app:srcCompat="@drawable/interrogacion" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/u3a7ivSeleccionarJugador2"
         android:layout_width="163dp"
-        android:layout_height="128dp"
+        android:layout_height="148dp"
         android:layout_marginTop="32dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="@+id/u3a7btSeleccionarJugador1"
         app:layout_constraintStart_toStartOf="@+id/u3a7btSeleccionarJugador1"
         app:layout_constraintTop_toBottomOf="@+id/u3a7btSeleccionarJugador1"
         app:srcCompat="@drawable/interrogacion" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/u3a7ivSeleccionarArma2"
         android:layout_width="163dp"
-        android:layout_height="128dp"
+        android:layout_height="148dp"
         android:layout_marginTop="32dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="@+id/u3a7btSeleccionarArma1"
         app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="@+id/u3a7btSeleccionarArma1"
         app:layout_constraintTop_toBottomOf="@+id/u3a7btSeleccionarArma1"
         app:srcCompat="@drawable/interrogacion" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/u3a7ivSeleccionarArma1"
         android:layout_width="163dp"
-        android:layout_height="128dp"
+        android:layout_height="148dp"
         android:layout_marginStart="32dp"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toEndOf="@+id/u3a7ivSeleccionarJugador1"
         app:layout_constraintTop_toTopOf="@+id/u3a7ivSeleccionarJugador1"
         app:srcCompat="@drawable/interrogacion" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/u3a7ivSeleccionarJugador1"
         android:layout_width="163dp"
-        android:layout_height="128dp"
+        android:layout_height="148dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="140dp"
+        android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/interrogacion" />

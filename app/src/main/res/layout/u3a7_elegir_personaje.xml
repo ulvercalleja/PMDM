@@ -16,44 +16,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/u3a7ivPersonaje1"
         android:layout_width="187dp"
-        android:layout_height="174dp"
-        android:layout_marginStart="28dp"
+        android:layout_height="144dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="202dp"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="@+id/u3a7tvSeleccionaPersonaje"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/u3a7tvSeleccionaPersonaje"
         app:layout_constraintTop_toBottomOf="@+id/u3a7tvSeleccionaPersonaje"
         app:srcCompat="@drawable/personaje1" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/u3a7ivPersonaje2"
         android:layout_width="187dp"
-        android:layout_height="174dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.796"
+        android:layout_height="144dp"
+        android:layout_marginStart="14dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/u3a7ivPersonaje1"
         app:layout_constraintStart_toEndOf="@+id/u3a7ivPersonaje1"
-        app:layout_constraintTop_toBottomOf="@+id/u3a7tvSeleccionaPersonaje"
+        app:layout_constraintTop_toTopOf="@+id/u3a7ivPersonaje1"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/personaje2" />
 
-    <ImageView
+    <ImageButton
+        android:scaleType="fitXY"
         android:id="@+id/u3a7ivPersonaje3"
         android:layout_width="187dp"
-        android:layout_height="174dp"
+        android:layout_height="144dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@+id/u3a7ivPersonaje1"
         app:layout_constraintStart_toStartOf="@+id/u3a7ivPersonaje1"
         app:layout_constraintTop_toBottomOf="@+id/u3a7ivPersonaje1"
         app:srcCompat="@drawable/personaje3" />
 
-    <ImageView
+    <ImageButton
+        android:scaleType="fitXY"
         android:id="@+id/u3a7ivPersonaje4"
         android:layout_width="187dp"
-        android:layout_height="174dp"
+        android:layout_height="144dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@+id/u3a7ivPersonaje2"
         app:layout_constraintStart_toStartOf="@+id/u3a7ivPersonaje2"

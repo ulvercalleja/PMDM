@@ -4,23 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 
 import pmdm.u2.R;
 
 public class u3a7ElegirPersonaje extends AppCompatActivity {
-
     public static final String INFO_IMAGEN = "ImageResourcePersonaje";
-    int imageResource = 0;
-    View.OnClickListener manejador;
-    ImageView ivPersonaje1;
-    ImageView ivPersonaje2;
-    ImageView ivPersonaje3;
-    ImageView ivPersonaje4;
+    public static final String INFO_PERSONAJE = "PERSONAJESELECCIONADO";
+    ImageButton ivPersonaje1;
+    ImageButton ivPersonaje2;
+    ImageButton ivPersonaje3;
+    ImageButton ivPersonaje4;
     Button btLimpiar;
     Button btCancelar;
 
@@ -34,51 +31,41 @@ public class u3a7ElegirPersonaje extends AppCompatActivity {
         ivPersonaje4 = findViewById(R.id.u3a7ivPersonaje4);
         btLimpiar = findViewById(R.id.u3a7btLimpiarPersonaje);
         btCancelar = findViewById(R.id.u3a7btCancelarPersonaje);
-        /*
-        manejador = (View imagenPulsada) -> {
-            ImageView imagen = (ImageView) imagenPulsada;
-            if (imagenPulsada == ivPersonaje1){
-                imageResource = R.drawable.personaje1;
-                Intent intent = new Intent();
-                intent.putExtra(INFO_IMAGEN, imageResource);
-                setResult(Activity.RESULT_OK, intent);
-                finish();
-            } else if(imagenPulsada == ivPersonaje2){
-                imageResource = R.drawable.personaje2;
-                Intent intent = new Intent();
-                intent.putExtra(INFO_IMAGEN, imageResource);
-                setResult(Activity.RESULT_OK, intent);
-                finish();
-            } else if(imagenPulsada == ivPersonaje3){
-                imageResource = R.drawable.personaje3;
-                Intent intent = new Intent();
-                intent.putExtra(INFO_IMAGEN, imageResource);
-                setResult(Activity.RESULT_OK, intent);
-                finish();
-            } else if(imagenPulsada == ivPersonaje4){
-                imageResource = R.drawable.personaje4;
-                Intent intent = new Intent();
-                intent.putExtra(INFO_IMAGEN, imageResource);
-                setResult(Activity.RESULT_OK, intent);
-                finish();
-            }
-        };
-
-        ivPersonaje1.setOnClickListener(manejador);
-        ivPersonaje2.setOnClickListener(manejador);
-        ivPersonaje3.setOnClickListener(manejador);
-        ivPersonaje4.setOnClickListener(manejador);
-        */
 
         ivPersonaje1.setOnClickListener(view -> {
-            imageResource = R.drawable.personaje1;
+            ivPersonaje1.setVisibility(View.INVISIBLE);
             Intent intent = new Intent();
-            intent.putExtra(INFO_IMAGEN, imageResource);
+            intent.putExtra(INFO_IMAGEN, R.drawable.personaje1);
+            setResult(Activity.RESULT_OK, intent);
+            finish();
+        });
+
+        ivPersonaje2.setOnClickListener(view -> {
+            ivPersonaje2.setVisibility(View.INVISIBLE);
+            Intent intent = new Intent();
+            intent.putExtra(INFO_IMAGEN, R.drawable.personaje2);
+            setResult(Activity.RESULT_OK, intent);
+            finish();
+        });
+
+        ivPersonaje3.setOnClickListener(view -> {
+            ivPersonaje3.setVisibility(View.INVISIBLE);
+            Intent intent = new Intent();
+            intent.putExtra(INFO_IMAGEN, R.drawable.personaje3);
+            setResult(Activity.RESULT_OK, intent);
+            finish();
+        });
+
+        ivPersonaje4.setOnClickListener(view -> {
+            ivPersonaje4.setVisibility(View.INVISIBLE);
+            Intent intent = new Intent();
+            intent.putExtra(INFO_IMAGEN, R.drawable.personaje4);
             setResult(Activity.RESULT_OK, intent);
             finish();
         });
 
         btLimpiar.setOnClickListener(view -> {
+            setResult(Activity.RESULT_FIRST_USER);
             finish();
         });
 

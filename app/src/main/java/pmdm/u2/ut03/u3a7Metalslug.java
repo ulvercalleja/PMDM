@@ -18,7 +18,7 @@ import pmdm.u2.R;
 public class u3a7Metalslug extends AppCompatActivity {
     public static final int DEFAULT_VALUE = 0;
     int imageViewResource = 0;
-    View.OnClickListener manejador;
+    ActivityResultLauncher<Intent> lanzadoraPersonaje1,lanzadoraPersonaje2, lanzadoraArma1, lanzadoraArma2;
     Button btSeleccionarJugador1;
     Button btSeleccionarArma1;
     Button btSeleccionarJugador2;
@@ -35,7 +35,7 @@ public class u3a7Metalslug extends AppCompatActivity {
 
         btSeleccionarJugador1 = findViewById(R.id.u3a7btSeleccionarJugador1);
         btSeleccionarArma1 = findViewById(R.id.u3a7btSeleccionarArma1);
-        btSeleccionarJugador2 = findViewById(R.id.u3a7btSeleccionarJugador1);
+        btSeleccionarJugador2 = findViewById(R.id.u3a7btSeleccionarJugador2);
         btSeleccionarArma2 = findViewById(R.id.u3a7btSeleccionarArma2);
         ivSeleccionarJugador1 = findViewById(R.id.u3a7ivSeleccionarJugador1);
         ivSeleccionarArma1 = findViewById(R.id.u3a7ivSeleccionarArma1);
@@ -43,28 +43,35 @@ public class u3a7Metalslug extends AppCompatActivity {
         ivSeleccionarArma2 = findViewById(R.id.u3a7ivSeleccionarArma2);
         tvError = findViewById(R.id.u3a7tvError);
 
-        ActivityResultLauncher<Intent> lanzadora = registerForActivityResult(
+        btSeleccionarJugador1.setOnClickListener(View -> {
+            Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirPersonaje.class);
+            lanzadoraPersonaje1.launch(intent);
+        });
+
+        btSeleccionarJugador2.setOnClickListener(View -> {
+            Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirPersonaje.class);
+            lanzadoraPersonaje2.launch(intent);
+        });
+
+        btSeleccionarArma1.setOnClickListener(View -> {
+            Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirArma.class);
+            lanzadoraArma1.launch(intent);
+        });
+
+        btSeleccionarArma2.setOnClickListener(View -> {
+            Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirArma.class);
+            lanzadoraArma2.launch(intent);
+        });
+
+        lanzadoraPersonaje1 = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(), (result)->{
+                    Intent data = result.getData();
                     if (result.getResultCode() == Activity.RESULT_OK) {
-                        Intent data = result.getData();
-
-                        manejador = (View botonPulsado) -> {
-                            Button boton = (Button)botonPulsado;
-                            if (botonPulsado == btSeleccionarJugador1){
-                                imageViewResource = data.getIntExtra(u3a7ElegirPersonaje.INFO_IMAGEN, DEFAULT_VALUE);
-                                ivSeleccionarJugador1.setImageResource(imageViewResource);
-                            } else if(botonPulsado == btSeleccionarArma1){
-                                imageViewResource = data.getIntExtra(u3a7ElegirArma.INFO_IMAGEN, DEFAULT_VALUE);
-                                ivSeleccionarArma1.setImageResource(imageViewResource);
-                            } else if(botonPulsado == btSeleccionarJugador2){
-                                imageViewResource = data.getIntExtra(u3a7ElegirPersonaje.INFO_IMAGEN, DEFAULT_VALUE);
-                                ivSeleccionarJugador2.setImageResource(imageViewResource);
-                            } else if(botonPulsado == btSeleccionarArma2){
-                                imageViewResource = data.getIntExtra(u3a7ElegirArma.INFO_IMAGEN, DEFAULT_VALUE);
-                                ivSeleccionarArma2.setImageResource(imageViewResource);
-                            }
-                        };
-
+                        imageViewResource = data.getIntExtra(u3a7ElegirPersonaje.INFO_IMAGEN, DEFAULT_VALUE);
+                        ivSeleccionarJugador1.setImageResource(imageViewResource);
+                        tvError.setText("");
+                    } else if(result.getResultCode() == Activity.RESULT_FIRST_USER) {
+                        ivSeleccionarJugador1.setImageResource(R.drawable.interrogacion);
                         tvError.setText("");
                     } else if (result.getResultCode() == Activity.RESULT_CANCELED){
                         tvError.setTextColor(Color.RED);
@@ -73,27 +80,56 @@ public class u3a7Metalslug extends AppCompatActivity {
                 }
         );
 
-        manejador = (View botonPulsado) -> {
-            Button boton = (Button)botonPulsado;
-            if (botonPulsado == btSeleccionarJugador1){
-                Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirPersonaje.class);
-                lanzadora.launch(intent);
-            } else if(botonPulsado == btSeleccionarArma1){
-                Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirArma.class);
-                lanzadora.launch(intent);
-            } else if(botonPulsado == btSeleccionarJugador2){
-                Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirPersonaje.class);
-                lanzadora.launch(intent);
-            } else if(botonPulsado == btSeleccionarArma2){
-                Intent intent = new Intent(u3a7Metalslug.this, u3a7ElegirArma.class);
-                lanzadora.launch(intent);
-            }
-        };
+        lanzadoraPersonaje2 = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(), (result)->{
+                    Intent data = result.getData();
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        imageViewResource = data.getIntExtra(u3a7ElegirPersonaje.INFO_IMAGEN, DEFAULT_VALUE);
+                        ivSeleccionarJugador2.setImageResource(imageViewResource);
+                        tvError.setText("");
+                    } else if(result.getResultCode() == Activity.RESULT_FIRST_USER) {
+                        ivSeleccionarJugador2.setImageResource(R.drawable.interrogacion);
+                        tvError.setText("");
+                    } else if (result.getResultCode() == Activity.RESULT_CANCELED){
+                        tvError.setTextColor(Color.RED);
+                        tvError.setText("El usuario ha cancelado la actividad.");
+                    }
+                }
+        );
 
-        btSeleccionarJugador1.setOnClickListener(manejador);
-        btSeleccionarJugador2.setOnClickListener(manejador);
-        btSeleccionarArma1.setOnClickListener(manejador);
-        btSeleccionarArma2.setOnClickListener(manejador);
+        lanzadoraArma1 = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(), (result)->{
+                    Intent data = result.getData();
+                    if(result.getResultCode() == Activity.RESULT_OK) {
+                        imageViewResource = data.getIntExtra(u3a7ElegirArma.INFO_IMAGEN, DEFAULT_VALUE);
+                        ivSeleccionarArma1.setImageResource(imageViewResource);
+                        tvError.setText("");
+                    } else if(result.getResultCode() == Activity.RESULT_FIRST_USER) {
+                        ivSeleccionarArma1.setImageResource(R.drawable.interrogacion);
+                        tvError.setText("");
+                    } else if (result.getResultCode() == Activity.RESULT_CANCELED){
+                        tvError.setTextColor(Color.RED);
+                        tvError.setText("El usuario ha cancelado la actividad.");
+                    }
+                }
+        );
+
+        lanzadoraArma2 = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(), (result)->{
+                    Intent data = result.getData();
+                    if (result.getResultCode() == Activity.RESULT_OK) {
+                        imageViewResource = data.getIntExtra(u3a7ElegirArma.INFO_IMAGEN, DEFAULT_VALUE);
+                        ivSeleccionarArma2.setImageResource(imageViewResource);
+                        tvError.setText("");
+                    } else if(result.getResultCode() == Activity.RESULT_FIRST_USER) {
+                        ivSeleccionarArma2.setImageResource(R.drawable.interrogacion);
+                        tvError.setText("");
+                    } else if (result.getResultCode() == Activity.RESULT_CANCELED){
+                        tvError.setTextColor(Color.RED);
+                        tvError.setText("El usuario ha cancelado la actividad.");
+                    }
+                }
+        );
 
     }
 }
