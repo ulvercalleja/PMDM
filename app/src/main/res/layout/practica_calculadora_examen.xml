@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".practicaExamen.CalculadoraExamen">
+
+    <EditText
+        android:id="@+id/exetN1"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="N1"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/exetN2"
+        android:layout_width="90dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="N2"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/exrbDRadioGroup"
+        android:layout_width="161dp"
+        android:layout_height="199dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/exetN2"
+        app:layout_constraintStart_toStartOf="@+id/exetN1"
+        app:layout_constraintTop_toBottomOf="@+id/exetN1">
+
+        <RadioButton
+            android:id="@+id/exrbSumar"
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:text="Sumar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.175"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.926" />
+
+        <RadioButton
+            android:id="@+id/exrbRestar"
+            android:layout_width="156dp"
+            android:layout_height="50dp"
+            android:text="Restar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.859" />
+
+        <RadioButton
+            android:id="@+id/exrbDividir"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:text="Dividir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.786" />
+
+        <RadioButton
+            android:id="@+id/exrbMultiplicar"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:text="Multiplicar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.168"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.686" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/exbtCalcular"
+        android:layout_width="358dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="32dp"
+        android:text="Calcular"
+        app:layout_constraintEnd_toEndOf="@+id/exetN2"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/exetN1"
+        app:layout_constraintTop_toBottomOf="@+id/exrbDRadioGroup" />
+
+    <TextView
+        android:id="@+id/extvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="#F30C27"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/exbtCalcular"
+        app:layout_constraintStart_toStartOf="@+id/exbtCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/exbtCalcular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

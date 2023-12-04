@@ -14,6 +14,7 @@ import android.widget.TimePicker;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import pmdm.u2.R;
 
@@ -24,6 +25,7 @@ public class u2a5TattoApp extends AppCompatActivity {
     private TextView selectedDateTV;
     private Button pickTimeBtn;
     private TextView selectedTimeTV;
+    TextView tvErrorFecha;
     EditText ptDNI;
     Button validateDNIButton;
     TextView validationStatus;
@@ -43,6 +45,7 @@ public class u2a5TattoApp extends AppCompatActivity {
         validateDNIButton = findViewById(R.id.u2a5btValidar);
         validationStatus = findViewById(R.id.u2a5vtValidar);
         checkImageView = findViewById(R.id.imageView2);
+        tvErrorFecha = findViewById(R.id.u2a5tvError);
         checkImageView.setVisibility(View.GONE);
         // on below line we are adding click listener for our pick date button
         pickDateBtn.setOnClickListener(new View.OnClickListener() {
@@ -62,13 +65,16 @@ public class u2a5TattoApp extends AppCompatActivity {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(
                         // on below line we are passing context.
                         u2a5TattoApp.this,
-                        new DatePickerDialog.OnDateSetListener() {
-                            @Override
-                            public void onDateSet(DatePicker view, int year,
-                                                  int monthOfYear, int dayOfMonth) {
+                        (view, year1, monthOfYear, dayOfMonth) -> {
+                            // on below line we are setting date to our text view.
+                            Calendar selectedDate = new GregorianCalendar(year, monthOfYear, dayOfMonth);
+                            int diaSemana = selectedDate.get(Calendar.DAY_OF_WEEK);
+                            if (diaSemana == Calendar.SATURDAY || diaSemana == Calendar.SUNDAY) {
+                                tvErrorFecha.setText("Fecha erronea. Abrimos de lunes a viernes.");
+                            } else {
                                 // on below line we are setting date to our text view.
-                                selectedDateTV.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
-
+                                selectedDateTV.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year1);
+                                tvErrorFecha.setText("");
                             }
                         },
                         // on below line we are passing year,
@@ -93,13 +99,14 @@ public class u2a5TattoApp extends AppCompatActivity {
 
                 // on below line we are initializing our Time Picker Dialog
                 TimePickerDialog timePickerDialog = new TimePickerDialog(u2a5TattoApp.this,
-                        new TimePickerDialog.OnTimeSetListener() {
-                            @Override
-                            public void onTimeSet(TimePicker view, int hourOfDay,
-                                                  int minute) {
-                                // on below line we are setting selected time
-                                // in our text view.
-                                selectedTimeTV.setText(hourOfDay + ":" + minute);
+                        (view, hourOfDay, minute1) -> {
+                            // on below line we are setting selected time
+                            // in our text view.
+                            if (hourOfDay >= 9 && hourOfDay < 14) {
+                                selectedDateTV.setText(hourOfDay + ":" + minute1);
+                                tvErrorFecha.setText("");
+                            }else{
+                                tvErrorFecha.setText("Hora errónea. Abrimos de 9 a 14.");
                             }
                         }, hour, minute, false);
                 // at last we are calling show to
