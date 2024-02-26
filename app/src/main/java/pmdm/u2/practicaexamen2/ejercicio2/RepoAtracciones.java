@@ -12,4 +12,6 @@ public interface RepoAtracciones {
     @GET("/api/atracciones/")
     Call<List<PojoAtracciones>> getAtracciones();
 
+    @GET("/api/atracciones/{id}/")
+    Call<PojoAtracciones> getComentarios(@Path("id") String id);
 }

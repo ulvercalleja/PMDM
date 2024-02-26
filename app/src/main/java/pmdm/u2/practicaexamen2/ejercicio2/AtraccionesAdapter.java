@@ -14,9 +14,8 @@ import java.util.List;
 import pmdm.u2.R;
 
 public class AtraccionesAdapter extends RecyclerView.Adapter<AtraccionesAdapter.ViewHolder>{
-    private static final String INFO_OCUPACION = "ocupacion";
-    private static final String INFO_DESCRIPCION = "descripcion";
-    private static final String INFO_COMENTARIOS = "comentario";
+    public static final String INFO_OCUPACION = "ocupacion";
+    public static final String INFO_DESCRIPCION = "descripcion";
     private List<PojoAtracciones> listaAtracciones;
     private Context context;
 

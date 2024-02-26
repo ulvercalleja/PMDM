@@ -8,16 +8,16 @@ public class PojoAtracciones implements Serializable {
     private String nombre;
     private String descripcion;
     private int ocupantes;
-    private List<Comentario> comentarios;
+    private List<PojoComentarios> comentarios;
 
-    public PojoAtracciones(String nombre, String descripcion, int ocupantes, List<Comentario> comentarios) {
+    public PojoAtracciones(String nombre, String descripcion, int ocupantes, List<PojoComentarios> comentarios) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.ocupantes = ocupantes;
         this.comentarios = comentarios;
     }
 
-    public List<Comentario> getComentarios() {
+    public List<PojoComentarios> getComentarios() {
         return comentarios;
     }
 
