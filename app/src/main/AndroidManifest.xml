@@ -32,11 +32,28 @@
         android:theme="@style/Theme.U2a2Colorator"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity android:name=".practicaexamen2.ejercicio4.ActoresActivity" android:exported="false"/>
-        <activity android:name=".practicaexamen2.ejercicio4.PeliculasActivity" android:exported="true">
+        <activity
+            android:name=".practicaexamen2.ejercicio5.MostrarContenidoPelis"
+            android:exported="false" />
+        <activity
+            android:name=".practicaexamen2.ejercicio5.ActividadPeliculas"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".practicaexamen2.ejercicio4.ActoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".practicaexamen2.ejercicio4.PeliculasActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
